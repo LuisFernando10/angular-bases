@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class HeroComponent {
   public name: string = 'iron Man';
   public age: number = 42;
+  public showNameBtn: boolean = true;
 
   get capitalizedName(): string {
     return this.name.toUpperCase();
@@ -18,10 +19,17 @@ export class HeroComponent {
   }
 
   changeHero(heroName: string): void {
+    this.showNameBtn = false;
     this.name = heroName;
   }
 
   changeAge(heroAge: number): void {
     this.age = heroAge;
+  }
+
+  resetForm(): void {
+    this.showNameBtn = true;
+    this.name = 'iron Man';
+    this.age = 42;
   }
 }
