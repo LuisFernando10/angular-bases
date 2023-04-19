@@ -16,4 +16,12 @@ export class HeroComponent {
   getDescription(): string {
     return `${this.name} - ${this.age}`;
   }
+
+  changeHero(heroName: string): void {
+    this.name = heroName;
+  }
+
+  changeAge(heroAge: number): void {
+    this.age = heroAge;
+  }
 }
