@@ -10,6 +10,10 @@
       let isOdd = odd
     "
     class="list-group-item"
+    [ngClass]="{
+      'list-group-item-dark': isFirst,
+      'list-group-item-primary': isEven
+    }"
   >
     <strong>{{ i + 1 }}. </strong>
     <strong>Nombre: </strong> <span>{{ character.name }}</span> -
