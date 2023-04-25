@@ -11,4 +11,8 @@ export class MainPageComponent {
     { name: 'Gokú', power: 9500 },
     { name: 'Vegeta', power: 7800 },
   ];
+
+  onNewCharacter(character: ICharacter): void {
+    console.log('MAIN PADRE', character);
+  }
 }
