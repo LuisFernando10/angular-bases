@@ -15,8 +15,6 @@ export class AddCharacterComponent {
   };
 
   emitCharacter(): void {
-    console.log(this.character, 'HIJO');
-
     if (this.character.name.length === 0) return;
 
     this.onNewCharacter.emit(this.character);

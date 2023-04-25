@@ -13,6 +13,10 @@ export class MainPageComponent {
   ];
 
   onNewCharacter(character: ICharacter): void {
-    console.log('MAIN PADRE', character);
+    this.characters.push(character);
+  }
+
+  onDelete(id: number): void {
+    this.characters.splice(id, 1);
   }
 }
