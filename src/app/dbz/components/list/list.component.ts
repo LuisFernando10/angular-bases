@@ -10,9 +10,10 @@ export class ListComponent {
   public characterList: ICharacter[] = [];
 
   @Output()
-  onDelete: EventEmitter<number> = new EventEmitter();
+  onDelete: EventEmitter<string> = new EventEmitter();
 
-  onDeleteCharacter(idx: number): void {
-    this.onDelete.emit(idx);
+  onDeleteCharacter(id?: string): void {
+    if (!id) return;
+    this.onDelete.emit(id);
   }
 }
