@@ -12,7 +12,7 @@ export class DbzService {
     { id: uuid(), name: 'Vegeta', power: 7800 },
   ];
 
-  onNewCharacter(character: ICharacter): void {
+  addCharacter(character: ICharacter): void {
     this.characters.push({ id: uuid(), ...character });
   }
 
